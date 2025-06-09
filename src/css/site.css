@@ -1,0 +1,288 @@
+/* Base Reset and Typography */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f4f4;
+  color: #222;
+}
+
+/* General Form Controls */
+input[type="text"],
+input[type="search"] {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+button {
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* Movies Page */
+.movies-page {
+  background-color: #658d8185;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+}
+
+.movies-page h1 {
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.todo-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1.5rem auto;
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: #e6ffe6;
+  border: 2px solid #28a745;
+}
+
+.todo-header input {
+  width: 100%;
+  max-width: 400px;
+}
+
+.todo-header button {
+  min-width: 120px;
+}
+
+/* Movie Cards */
+.card {
+  width: 18rem;
+  margin: 1rem;
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.card img {
+  height: 300px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.card-body {
+  padding: 1rem;
+}
+
+.card-title {
+  font-weight: 600;
+}
+
+.card-text {
+  font-size: 0.9rem;
+}
+
+.movie-page {
+  min-height: 100vh;
+  background-color: #658d81;
+  padding-bottom: 4rem;
+}
+
+.movie-page .card {
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.movie-page .card-title {
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.movie-page .btn {
+  margin-top: 0.5rem;
+}
+
+
+/* Store Page */
+section {
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card-image-top {
+  width: 100%;
+  height: 250px;
+  object-fit: contain;
+}
+
+.card-body {
+  height: 200px;
+  overflow-y: auto;
+}
+
+h1,
+h2 {
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 1rem;
+}
+
+/* Store Page Images */
+.store-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: contain;
+  padding: 1rem;
+  background-color: #fefefe;
+  border-bottom: 1px solid #ddd;
+  transition: transform 0.2s ease;
+}
+
+.store-card img:hover {
+  transform: scale(1.05);
+}
+
+.carousel {
+  max-width: 100%;
+  margin: 2rem auto;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+}
+
+.carousel-inner {
+  max-height: 500px;
+}
+
+.carousel-img {
+  height: 500px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  padding: 15px;
+}
+
+.carousel-indicators [data-bs-target] {
+  background-color: #198754;
+  /* Bootstrap green */
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+/* TodoApp */
+.tasks {
+  margin: 1rem;
+}
+
+.tasks .fa-trash {
+  font-size: 1.2rem;
+}
+
+.tasks .fa-trash:hover {
+  color: red;
+}
+
+.tasks>div {
+  background-color: #fff;
+  border: 2px solid #28a745;
+  color: #28a745;
+  font-size: 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-item {
+  transition: all 0.2s ease-in-out;
+}
+
+.task-item:hover {
+  transform: scale(1.01);
+  box-shadow: 0 0 10px rgba(0, 128, 0, 0.1);
+}
+
+footer .nav-link {
+  color: black !important;
+}
+
+footer .nav-link:hover,
+a.link-dark {
+  color: #28a745;
+  /* or whatever the hover color already is */
+}
+
+/* Responsive Utilities */
+
+/* Small devices: iPhone SE / older Android */
+@media (max-width: 320px) {
+
+  h1,
+  h2 {
+    font-size: 1.1rem;
+  }
+}
+
+/* Small-mid phones: iPhone 6/7/8, Samsung S8 */
+@media (min-width: 321px) and (max-width: 375px) {
+
+  h1,
+  h2 {
+    font-size: 1.25rem;
+  }
+}
+
+/* Modern phones: iPhone 12–14, Samsung S20+ */
+@media (min-width: 376px) and (max-width: 428px) {
+
+  h1,
+  h2 {
+    font-size: 1.3rem;
+  }
+}
+
+/* Tablets: iPad Portrait + Landscape */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .card img {
+    height: 250px;
+  }
+}
+
+/* Desktops + Laptops (MacBooks, PCs) */
+@media (min-width: 1025px) {
+  .card-body {
+    height: 180px;
+  }
+}
+
+/* Stack form on narrow screens */
+@media (max-width: 768px) {
+  .todo-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .form-control,
+  .btn {
+    width: 100% !important;
+  }
+}
