@@ -10,7 +10,7 @@ export default function MovieSite() {
     function getMovieHandler(e) {
         e.preventDefault();
         if (text.length < 3) {
-            Swal.fire('Enter at least 3 Characters');
+            Swal.fire('Enter at least 4 Characters');
             return;
         }
 
