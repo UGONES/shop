@@ -1,4 +1,6 @@
-/* Base Reset and Typography */
+/* ========================
+   Global Styles & Resets
+=========================== */
 body {
   margin: 0;
   padding: 0;
@@ -7,7 +9,6 @@ body {
   color: #222;
 }
 
-/* General Form Controls */
 input[type="text"],
 input[type="search"] {
   border: 1px solid #ccc;
@@ -26,41 +27,6 @@ button:hover {
   opacity: 0.9;
 }
 
-/* Movies Page */
-.movies-page {
-  background-color: #658d8185;
-  min-height: 100vh;
-  padding: 2rem 1rem;
-}
-
-.movies-page h1 {
-  font-weight: bold;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.todo-header {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-  margin: 1.5rem auto;
-  padding: 1rem;
-  border-radius: 10px;
-  background-color: #e6ffe6;
-  border: 2px solid #28a745;
-}
-
-.todo-header input {
-  width: 100%;
-  max-width: 400px;
-}
-
-.todo-header button {
-  min-width: 120px;
-}
-
-/* Movie Cards */
 .card {
   width: 18rem;
   margin: 1rem;
@@ -74,9 +40,9 @@ button:hover {
 }
 
 .card img {
+  width: 100%;
   height: 300px;
   object-fit: cover;
-  width: 100%;
 }
 
 .card-body {
@@ -89,6 +55,38 @@ button:hover {
 
 .card-text {
   font-size: 0.9rem;
+}
+
+h1,
+h2 {
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 1rem;
+}
+
+footer .nav-link {
+  color: black !important;
+}
+
+footer .nav-link:hover,
+a.link-dark {
+  color: #28a745;
+}
+
+
+/* ========================
+   Movies Page Styles
+=========================== */
+.movies-page {
+  background-color: #658d8185;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+}
+
+.movies-page h1 {
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .movie-page {
@@ -112,7 +110,9 @@ button:hover {
 }
 
 
-/* Store Page */
+/* ========================
+   Store Page Styles
+=========================== */
 section {
   padding: 1rem;
   display: flex;
@@ -126,19 +126,6 @@ section {
   object-fit: contain;
 }
 
-.card-body {
-  height: 200px;
-  overflow-y: auto;
-}
-
-h1,
-h2 {
-  text-align: center;
-  text-transform: uppercase;
-  margin-top: 1rem;
-}
-
-/* Store Page Images */
 .store-card img {
   width: 100%;
   height: 250px;
@@ -180,13 +167,36 @@ h2 {
 
 .carousel-indicators [data-bs-target] {
   background-color: #198754;
-  /* Bootstrap green */
   width: 12px;
   height: 12px;
   border-radius: 50%;
 }
 
-/* TodoApp */
+
+/* ========================
+   Todo App Styles
+=========================== */
+.todo-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1.5rem auto;
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: #e6ffe6;
+  border: 2px solid #28a745;
+}
+
+.todo-header input {
+  width: 100%;
+  max-width: 400px;
+}
+
+.todo-header button {
+  min-width: 120px;
+}
+
 .tasks {
   margin: 1rem;
 }
@@ -199,7 +209,7 @@ h2 {
   color: red;
 }
 
-.tasks>div {
+.tasks > div {
   background-color: #fff;
   border: 2px solid #28a745;
   color: #28a745;
@@ -221,41 +231,27 @@ h2 {
   box-shadow: 0 0 10px rgba(0, 128, 0, 0.1);
 }
 
-footer .nav-link {
-  color: black !important;
-}
 
-footer .nav-link:hover,
-a.link-dark {
-  color: #28a745;
-  /* or whatever the hover color already is */
-}
-
-/* Responsive Utilities */
-
+/* ========================
+   Responsive Styles
+=========================== */
 /* Small devices: iPhone SE / older Android */
 @media (max-width: 320px) {
-
-  h1,
-  h2 {
+  h1, h2 {
     font-size: 1.1rem;
   }
 }
 
 /* Small-mid phones: iPhone 6/7/8, Samsung S8 */
 @media (min-width: 321px) and (max-width: 375px) {
-
-  h1,
-  h2 {
+  h1, h2 {
     font-size: 1.25rem;
   }
 }
 
 /* Modern phones: iPhone 12–14, Samsung S20+ */
 @media (min-width: 376px) and (max-width: 428px) {
-
-  h1,
-  h2 {
+  h1, h2 {
     font-size: 1.3rem;
   }
 }
@@ -274,7 +270,7 @@ a.link-dark {
   }
 }
 
-/* Stack form on narrow screens */
+/* Stack Todo Form on Narrow Screens */
 @media (max-width: 768px) {
   .todo-header {
     flex-direction: column;

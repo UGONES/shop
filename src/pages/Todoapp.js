@@ -44,7 +44,7 @@ export default function Todoapp() {
     return (
         <>
             <h1 className="text-center text-uppercase">Todo App</h1>
-            <div className="todo-header d-flex flex-wrap justify-content-around m-3 p-3 rounded border-success">
+            <div className="todo-header d-flex flex-wrap justify-content-around m-3 p-3 rounded border-success" >
                 <input
                     value={newItem}
                     onChange={e => setNewItem(e.target.value)}

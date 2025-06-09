@@ -1,4 +1,3 @@
-import React from "react";
 import '../css/site.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import { useState, useEffect } from "react";

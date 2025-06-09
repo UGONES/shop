@@ -27,11 +27,11 @@ export default function MovieSite() {
     }
 
     return (
-        <div className="container-fluid py-5 movie-page" style={{ backgroundColor: "#658d81" }}>
+        <div className="container-fluid py-5 movie-page" style={{ backgroundColor: "#fff" }}>
             <h1 className="text-center text-uppercase text-black">Movies</h1>
-            <form onSubmit={getMovieHandler} className="d-flex flex-wrap justify-content-around m-3 p-3 rounded border border-danger">
-                <input onChange={e => setText(e.target.value)} className="fs-5 p-3 rounded me-3 border border-danger" />
-                <button className="btn btn-danger p-3 fs-5">Search</button>
+            <form onSubmit={getMovieHandler} className="d-flex flex-wrap justify-content-around m-3 p-3 rounded border border-success">
+                <input onChange={e => setText(e.target.value)} className="fs-5 p-3 rounded me-3 border border-success" />
+                <button className="btn btn-success p-3 fs-5">Search</button>
             </form>
             <div className="d-flex flex-wrap justify-content-center px-1">
                 {movies.map(x => (
