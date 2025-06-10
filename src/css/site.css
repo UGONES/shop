@@ -64,20 +64,44 @@ h2 {
   margin-top: 1rem;
 }
 
+footer .col-6:hover {
+color: #658d8185 !important;
+}
+
 footer .nav-link {
   color: black !important;
 }
 
 footer .nav-link:hover,
 a.link-dark {
-  color: #28a745;
+  color: #658d8185;
+}
+
+footer {
+  background-color: #f8f9fa;
+  border-radius: 12px;
+}
+
+footer h5 {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+footer a.nav-link:hover {
+  color: #198754 !important;
+  text-decoration: underline;
+}
+
+footer input.form-control {
+  border: 1px solid #ccc;
+  border-radius: 8px;
 }
 
 
 /* ========================
    Movies Page Styles
 =========================== */
-.movies-page {
+.container-fulid, .movies-page {
   background-color: #658d8185;
   min-height: 100vh;
   padding: 2rem 1rem;
@@ -145,7 +169,7 @@ section {
   margin: 2rem auto;
   border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 15px #00000026;
 }
 
 .carousel-inner {
@@ -160,7 +184,7 @@ section {
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: #00000080;
   border-radius: 50%;
   padding: 15px;
 }
@@ -206,7 +230,7 @@ section {
 }
 
 .tasks .fa-trash:hover {
-  color: red;
+  color: #abe2a4;
 }
 
 .tasks > div {

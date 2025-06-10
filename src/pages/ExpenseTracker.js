@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Swal from "sweetalert2";
 import '../css/site.css';
 import { FaTrash, FaEdit, FaSave } from "react-icons/fa";
@@ -12,14 +12,18 @@ export default function ExpenseTracker() {
   const [editAmount, setEditAmount] = useState("");
 
   const addExpense = () => {
-    if (!expense || !amount) {
-      Swal.fire("Please enter both title and amount");
-      return;
+    if (!expense.trim() || !amount.trim()) {
+      return Swal.fire("Please enter both title and amount");
     }
 
-    setExpenses([
-      ...expenses,
-      { id: Date.now(), expense, amount, timestamp: new Date().toLocaleString() },
+    setExpenses(prev => [
+      ...prev,
+      {
+        id: Date.now(),
+        expense: expense.trim(),
+        amount: parseFloat(amount).toFixed(2),
+        timestamp: new Date().toLocaleString(),
+      },
     ]);
 
     setExpense("");
@@ -27,7 +31,7 @@ export default function ExpenseTracker() {
   };
 
   const deleteExpense = (id) => {
-    setExpenses(expenses.filter((item) => item.id !== id));
+    setExpenses(expenses.filter(item => item.id !== id));
     Swal.fire("Expense deleted");
   };
 
@@ -38,17 +42,21 @@ export default function ExpenseTracker() {
   };
 
   const saveEdit = (id) => {
-    if (!editExpense || !editAmount) {
-      Swal.fire("Please fill out all fields");
-      return;
+    if (!editExpense.trim() || !editAmount.trim()) {
+      return Swal.fire("Please fill out all fields");
     }
 
-    const updated = expenses.map((item) =>
+    const updatedExpenses = expenses.map(item =>
       item.id === id
-        ? { ...item, expense: editExpense, amount: editAmount }
+        ? {
+            ...item,
+            expense: editExpense.trim(),
+            amount: parseFloat(editAmount).toFixed(2),
+          }
         : item
     );
-    setExpenses(updated);
+
+    setExpenses(updatedExpenses);
     setEditId(null);
     Swal.fire("Expense updated");
   };
@@ -87,23 +95,21 @@ export default function ExpenseTracker() {
         expenses.map((item) => (
           <div
             key={item.id}
-            className="bg-light border border-success text-success rounded d-flex justify-content-between align-items-center p-3 mb-3"
+            className="bg-light border border-success text-success rounded d-flex justify-content-between align-items-center p-3 mb-3 flex-wrap"
           >
-            <div>
+            <div className="mb-2 me-3" style={{ minWidth: "200px" }}>
               {editId === item.id ? (
                 <>
                   <input
                     value={editExpense}
                     onChange={(e) => setEditExpense(e.target.value)}
                     className="form-control mb-2"
-                    style={{ maxWidth: "200px" }}
                   />
                   <input
                     type="number"
                     value={editAmount}
                     onChange={(e) => setEditAmount(e.target.value)}
                     className="form-control"
-                    style={{ maxWidth: "120px" }}
                   />
                 </>
               ) : (
