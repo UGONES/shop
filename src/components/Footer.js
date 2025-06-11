@@ -36,7 +36,7 @@ export default function Footer() {
           <ul className="list-unstyled d-flex">
             <li className="ms-3"><a className="link-dark" href="#"><i className="fab fa-twitter"></i></a></li>
             <li className="ms-3"><a className="link-dark" href="#"><i className="fab fa-instagram"></i></a></li>
-            <li className="ms-3"><a className="link-dark" href="#"><i className="fab fa-facebook"></i></a></li>
+            <li className="ms-3"><a className="link-dark" href="https://facebook.com/?_rdc=1&_rdr#"><i className="fab fa-facebook"></i></a></li>
           </ul>
         </div>
       </footer>
